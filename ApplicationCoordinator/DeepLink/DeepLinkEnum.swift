@@ -6,4 +6,13 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-import Foundation
+enum Coordinators: String {
+    case ItemCoordinator = "ItemCoordinator"
+    case SettingsCoordinator = "SettingsCoordinator"
+    case ItemCreateCoordinator = "ItemCreateCoordinator"
+    case AuthCoordinator = "AuthCoordinator"
+}
+
+enum Controllers: String {
+    case ItemsListController = "ItemsListController"
+}

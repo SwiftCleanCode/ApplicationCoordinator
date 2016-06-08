@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol DeepLinkCoordinator {
+    
+    func forceController()
+}
