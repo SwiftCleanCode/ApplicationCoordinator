@@ -49,6 +49,7 @@
 		D58A5F351D07FD430022977E /* DeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F341D07FD430022977E /* DeepLinkParser.swift */; };
 		D58A5F371D07FD530022977E /* DeepLinkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F361D07FD530022977E /* DeepLinkEnum.swift */; };
 		D58A5F391D07FD690022977E /* DeepLinkCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F381D07FD690022977E /* DeepLinkCoordinatorProtocol.swift */; };
+		D58A5F3B1D08035E0022977E /* TreeScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F3A1D08035E0022977E /* TreeScheme.swift */; };
 		D5FDC84E1CEB3579001C3DF3 /* LoginFlowOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDC84D1CEB3579001C3DF3 /* LoginFlowOutput.swift */; };
 		D5FDC8501CEB3AE0001C3DF3 /* SignUpFlowOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDC84F1CEB3AE0001C3DF3 /* SignUpFlowOutput.swift */; };
 		D5FDC8541CEB56A8001C3DF3 /* SettingsFlowOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDC8531CEB56A8001C3DF3 /* SettingsFlowOutput.swift */; };
@@ -109,6 +110,7 @@
 		D58A5F341D07FD430022977E /* DeepLinkParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkParser.swift; sourceTree = "<group>"; };
 		D58A5F361D07FD530022977E /* DeepLinkEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkEnum.swift; sourceTree = "<group>"; };
 		D58A5F381D07FD690022977E /* DeepLinkCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D58A5F3A1D08035E0022977E /* TreeScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeScheme.swift; sourceTree = "<group>"; };
 		D5FDC84D1CEB3579001C3DF3 /* LoginFlowOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginFlowOutput.swift; path = ../LoginFlowOutput.swift; sourceTree = "<group>"; };
 		D5FDC84F1CEB3AE0001C3DF3 /* SignUpFlowOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpFlowOutput.swift; path = ../SignUpFlowOutput.swift; sourceTree = "<group>"; };
 		D5FDC8531CEB56A8001C3DF3 /* SettingsFlowOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFlowOutput.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				D58A5F341D07FD430022977E /* DeepLinkParser.swift */,
+				D58A5F3A1D08035E0022977E /* TreeScheme.swift */,
 				D58A5F361D07FD530022977E /* DeepLinkEnum.swift */,
 				D58A5F381D07FD690022977E /* DeepLinkCoordinatorProtocol.swift */,
 			);
@@ -492,6 +495,7 @@
 				D5311AB01CF8566D00777B87 /* ItemCreateFlowOutput.swift in Sources */,
 				D5FE332A1D071ED900CE38B1 /* AuthControllersFactoryImp.swift in Sources */,
 				D5505CC71CDF67F60012CBA6 /* UIViewExtensions.swift in Sources */,
+				D58A5F3B1D08035E0022977E /* TreeScheme.swift in Sources */,
 				D5FE332D1D071ED900CE38B1 /* SettingsControllersFactoryImp.swift in Sources */,
 				D541E76C1CD9134A004C38B3 /* TabbarController.swift in Sources */,
 				D5FE332B1D071ED900CE38B1 /* ItemControllersFactoryImp.swift in Sources */,
