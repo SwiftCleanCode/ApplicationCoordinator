@@ -31,14 +31,14 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
     }
     
     func createItemCreationCoordinatorBox() ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
          output: ItemCreateCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             
             return createItemCreationCoordinatorBox(navController: nil)
     }
     func createItemCreationCoordinatorBox(navController navController: UINavigationController? = nil) ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: ItemCreateCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             
@@ -49,7 +49,7 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
     }
     
     func createAuthCoordinatorBox() ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: AuthCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             
@@ -57,7 +57,7 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
     }
     
     func createAuthCoordinatorBox(navController navController: UINavigationController? = nil) ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: AuthCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             let router = self.router(navController)

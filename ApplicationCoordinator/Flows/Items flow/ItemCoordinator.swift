@@ -7,7 +7,7 @@
 //
 import UIKit
 
-final class ItemCoordinator: BaseCoordinator {
+final class ItemCoordinator: BaseDeepLinkCoordinator {
 
     var factory: ItemControllersFactory
     var coordinatorFactory: CoordinatorFactory

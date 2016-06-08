@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
+final class AuthCoordinator: BaseDeepLinkCoordinator, AuthCoordinatorOutput {
 
     var factory: AuthControllersFactory
     var router: Router

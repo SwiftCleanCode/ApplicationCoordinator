@@ -17,22 +17,22 @@ protocol CoordinatorFactory {
     func createSettingsCoordinator(navController navController: UINavigationController?) -> Coordinator
     
     func createItemCreationCoordinatorBox() ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: ItemCreateCoordinatorOutput,
         controllerForPresent: UIViewController?)
     
     func createItemCreationCoordinatorBox(navController navController: UINavigationController?) ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: ItemCreateCoordinatorOutput,
         controllerForPresent: UIViewController?)
     
     func createAuthCoordinatorBox() ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: AuthCoordinatorOutput,
         controllerForPresent: UIViewController?)
     
     func createAuthCoordinatorBox(navController navController: UINavigationController?) ->
-        (coordinator: Coordinator,
+        (coordinator: DeepLinkCoordinatorType,
         output: AuthCoordinatorOutput,
         controllerForPresent: UIViewController?)
 }

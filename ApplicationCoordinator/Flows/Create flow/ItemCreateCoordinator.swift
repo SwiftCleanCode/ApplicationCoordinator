@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-final class ItemCreateCoordinator: BaseCoordinator, ItemCreateCoordinatorOutput {
+final class ItemCreateCoordinator: BaseDeepLinkCoordinator, ItemCreateCoordinatorOutput {
 
     var factory: ItemCreateControllersFactory
     var router: Router

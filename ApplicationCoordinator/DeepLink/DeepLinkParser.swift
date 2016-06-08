@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+final class DeepLinkParser {
+    
+    class func proceedParam(param: String) {
+        
+        
+    }
+}

@@ -6,9 +6,10 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-import Foundation
-
-protocol DeepLinkCoordinator {
+protocol DeepLink {
     
     func forceController()
+    func close()
 }
+
+typealias DeepLinkCoordinatorType = protocol<Coordinator, DeepLink>
