@@ -21,6 +21,11 @@ protocol Router: class {
     func popController()
     func popController(animated: Bool)
     
+    func popToRootController()
+    func popToRootController(animated: Bool)
+    
+    func popToController(controller: UIViewController?, animated: Bool)
+    
     func dismissController()
     func dismissController(animated: Bool)
 }

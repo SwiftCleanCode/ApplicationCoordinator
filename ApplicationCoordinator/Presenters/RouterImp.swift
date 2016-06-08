@@ -11,6 +11,7 @@ import UIKit
 final class RouterImp: Router {
     
     private(set) weak var rootController: UINavigationController?
+    private var presented: Int = 0
     
     init(rootController: UINavigationController) {
         self.rootController = rootController
@@ -21,6 +22,8 @@ final class RouterImp: Router {
     }
     func present(controller: UIViewController?, animated: Bool) {
         guard let controller = controller else { return }
+        
+        presented = presented.successor()
         rootController?.presentViewController(controller, animated: animated, completion: nil)
     }
     
@@ -41,11 +44,33 @@ final class RouterImp: Router {
         rootController?.popViewControllerAnimated(animated)
     }
     
+    func popToRootController() {
+        popToRootController(true)
+    }
+    
+    func popToRootController(animated: Bool) {
+        
+        [0...presented].forEach {_ in
+            dismissController(false)
+        }
+        rootController?.popToRootViewControllerAnimated(animated)
+    }
+    
+    func popToController(controller: UIViewController?, animated: Bool) {
+        guard let controller = controller else { return }
+        
+        [0...presented].forEach {_ in
+            dismissController(false)
+        }
+        rootController?.popToViewController(controller, animated: animated)
+    }
+    
     func dismissController() {
         dismissController(true)
     }
     
     func dismissController(animated: Bool) {
+        presented = presented.predecessor()
         rootController?.dismissViewControllerAnimated(animated, completion: nil)
     }
 }

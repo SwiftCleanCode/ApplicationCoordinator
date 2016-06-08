@@ -20,6 +20,9 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinatorType {
     
     func close() {
         
+        for coordinator in childCoordinators {
+            coordinator.close()
+        }
     }
     
     // add only unique object

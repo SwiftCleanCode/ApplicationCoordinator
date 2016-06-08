@@ -7,7 +7,6 @@
 //
 
 protocol DeepLink {
-    
     func forceController()
     func close()
 }

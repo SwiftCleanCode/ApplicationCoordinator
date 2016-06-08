@@ -26,6 +26,18 @@ final class ItemCoordinator: BaseDeepLinkCoordinator {
         showItemList()
     }
     
+    override func close() {
+        super.close()
+        
+        router.popToRootController()
+    }
+    
+    override func forceController() {
+        close()
+        
+        
+    }
+    
 //MARK: - Run current flow's controllers
     
     private func showItemList() {
