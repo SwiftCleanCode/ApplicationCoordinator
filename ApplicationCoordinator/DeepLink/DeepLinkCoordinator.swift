@@ -7,6 +7,7 @@
 //
 
 protocol DeepLinkCoordinator: Coordinator, Identifierable {
+    
     func finish()
     func proceedDeepLink(seed: [DeepLinkSeed])
     func buildTree() -> CoordinatorTree

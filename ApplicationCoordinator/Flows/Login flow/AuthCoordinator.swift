@@ -23,6 +23,10 @@ final class AuthCoordinator: BaseDeepLinkCoordinator, AuthCoordinatorOutput {
         showLogin()
     }
     
+    override func controllersClassNames() -> [String] {
+        return router.controllersClassNames()
+    }
+    
     //MARK: - Run current flow's controllers
     
     private func showLogin() {

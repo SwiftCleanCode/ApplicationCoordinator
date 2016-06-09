@@ -21,7 +21,7 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinator {
     }
     
     func buildTree() -> CoordinatorTree {
-        
+        print(classIdentifier())
         var tree = CoordinatorTree(className: classIdentifier(),
                                    controllers: controllersClassNames(),
                                    childCoordinators: [])

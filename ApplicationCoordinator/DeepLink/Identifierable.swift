@@ -17,7 +17,7 @@ protocol Identifierable {
 
 extension Identifierable {
     func classIdentifier() -> String {
-        return String(self)
+        return (self is Any.Type) ? "\(self)" : "\(self.dynamicType)"
     }
 }
 

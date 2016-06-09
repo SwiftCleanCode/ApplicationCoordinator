@@ -23,6 +23,10 @@ final class ItemCreateCoordinator: BaseDeepLinkCoordinator, ItemCreateCoordinato
         showCreate()
     }
     
+    override func controllersClassNames() -> [String] {
+        return router.controllersClassNames()
+    }
+    
 //MARK: - Run current flow's controllers
     
     private func showCreate() {

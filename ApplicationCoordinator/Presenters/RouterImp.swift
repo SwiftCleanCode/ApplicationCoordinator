@@ -75,4 +75,15 @@ final class RouterImp: Router {
         presented = presented.predecessor()
         rootController?.dismissViewControllerAnimated(animated, completion: nil)
     }
+    
+    func controllersClassNames() -> [String] {
+        guard let rootController = rootController else { return [] }
+        var classNames: [String] = []
+        for controller in rootController.viewControllers {
+            if let input = controller as? FlowControllerInput {
+                classNames.append(input.classIdentifier())
+            }
+        }
+        return classNames
+    }
 }

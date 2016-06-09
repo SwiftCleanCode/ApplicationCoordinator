@@ -27,14 +27,7 @@ final class ItemCoordinator: BaseDeepLinkCoordinator {
     }
     
     override func controllersClassNames() -> [String] {
-        guard let rootController = router.rootController else { return [] }
-        var classNames: [String] = []
-        for controller in rootController.viewControllers {
-            if let input = controller as? FlowControllerInput {
-                classNames.append(input.classIdentifier())
-            }
-        }
-        return classNames
+        return router.controllersClassNames()
     }
     
 //MARK: - Run current flow's controllers

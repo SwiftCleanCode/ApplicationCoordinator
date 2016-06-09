@@ -10,7 +10,7 @@ import UIKit
 
 protocol Router: class {
     
-    weak var rootController: UINavigationController? { get }
+    weak var rootController: UINavigationController? {get}
     
     func present(controller: UIViewController?)
     func present(controller: UIViewController?, animated: Bool)
@@ -28,4 +28,6 @@ protocol Router: class {
     
     func dismissController()
     func dismissController(animated: Bool)
+    
+    func controllersClassNames() -> [String]
 }

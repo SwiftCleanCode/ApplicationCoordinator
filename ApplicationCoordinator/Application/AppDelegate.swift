@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        if false {
+        if true {
             applicationCoordinator.start()
         } else {
             applicationCoordinator.proceedDeepLink(DeepLinkParser.proceed())
