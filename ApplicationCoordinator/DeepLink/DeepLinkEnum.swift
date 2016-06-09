@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-enum CoordinatorsE: String {
+enum Coordinators: String {
     case ItemCoordinator = "ItemCoordinator"
     case SettingsCoordinator = "SettingsCoordinator"
     case ItemCreateCoordinator = "ItemCreateCoordinator"
@@ -15,8 +15,4 @@ enum CoordinatorsE: String {
 
 enum Controllers: String {
     case ItemsListController = "ItemsListController"
-}
-
-struct Coordinators {
-    
 }

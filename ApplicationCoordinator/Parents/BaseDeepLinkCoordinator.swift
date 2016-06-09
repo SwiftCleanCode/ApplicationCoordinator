@@ -14,15 +14,15 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinator {
         assertionFailure("")
     }
     
-    func forceController() {
-        
-    }
-    
     func finish() {
         
         for coordinator in childCoordinators {
             coordinator.finish()
         }
+    }
+    
+    func proceedDeepLink(seed: [DeepLinkSeed]) {
+        
     }
     
     // add only unique object

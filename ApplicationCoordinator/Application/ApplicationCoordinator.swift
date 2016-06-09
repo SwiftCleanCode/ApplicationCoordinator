@@ -26,6 +26,10 @@ final class ApplicationCoordinator: BaseDeepLinkCoordinator {
         tabbarFlowOutput.onSettingsFlowSelect = runSettingsCoordinator()
     }
     
+    override func proceedDeepLink(seed: [DeepLinkSeed]) {
+        
+    }
+    
     private func runItemCoordinator() -> ((UINavigationController) -> ()) {
         return { navController in
             if navController.viewControllers.isEmpty == true {

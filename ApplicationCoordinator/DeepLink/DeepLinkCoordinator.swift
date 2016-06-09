@@ -8,6 +8,6 @@
 
 protocol DeepLinkCoordinator: Coordinator, Identifierable {
     func finish()
-    func proceedDeepLink()
+    func proceedDeepLink(seed: [DeepLinkSeed])
 }
 
