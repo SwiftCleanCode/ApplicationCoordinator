@@ -12,13 +12,13 @@ protocol AuthControllersFactory {
     
     func createLoginBox() ->
         (controllerForPresent: UIViewController,
-        output: LoginFlowOutput)
+        configurator: protocol<FlowControllerInput, LoginFlowOutput>)
     
     func createSignUpBox() ->
         (controllerForPresent: UIViewController,
-        output: SignUpFlowOutput)
+        configurator: protocol<FlowControllerInput, SignUpFlowOutput>)
     
     func createTermsBox() ->
         (controller: UIViewController,
-        output: TermsControllerOutput)
+        configurator: protocol<FlowControllerInput, TermsControllerOutput>)
 }

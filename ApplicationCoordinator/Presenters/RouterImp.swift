@@ -11,7 +11,9 @@ import UIKit
 final class RouterImp: Router {
     
     private(set) weak var rootController: UINavigationController?
-    private var presented: Int = 0
+    private var presented: Int = 0 {
+        didSet { if presented < 0 { presented = 0 }}
+    }
     
     init(rootController: UINavigationController) {
         self.rootController = rootController

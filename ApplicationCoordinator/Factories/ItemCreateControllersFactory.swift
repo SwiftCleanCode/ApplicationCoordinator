@@ -12,5 +12,5 @@ protocol ItemCreateControllersFactory {
     
     func createItemAddBox() ->
         (controllerForPresent: UIViewController,
-        output: ItemCreateFlowOutput)
+        configurator: protocol<FlowControllerInput, ItemCreateFlowOutput>)
 }

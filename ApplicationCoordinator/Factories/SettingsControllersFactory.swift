@@ -12,5 +12,5 @@ protocol SettingsControllersFactory {
     
     func createSettingsBox() ->
         (controllerForPresent: UIViewController,
-         output: SettingsFlowOutput)
+         configurator: protocol<FlowControllerInput, SettingsFlowOutput>)
 }

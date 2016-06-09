@@ -6,9 +6,9 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-class BaseDeepLinkCoordinator: DeepLinkCoordinatorType {
+class BaseDeepLinkCoordinator: DeepLinkCoordinator {
 
-    var childCoordinators: [DeepLinkCoordinatorType] = []
+    var childCoordinators: [DeepLinkCoordinator] = []
     
     func start() {
         assertionFailure("")
@@ -18,15 +18,15 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinatorType {
         
     }
     
-    func close() {
+    func finish() {
         
         for coordinator in childCoordinators {
-            coordinator.close()
+            coordinator.finish()
         }
     }
     
     // add only unique object
-    func addDependancy(coordinator: DeepLinkCoordinatorType) {
+    func addDependancy(coordinator: DeepLinkCoordinator) {
         
         for element in childCoordinators {
             if ObjectIdentifier(element) == ObjectIdentifier(coordinator) { return }
@@ -34,7 +34,7 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinatorType {
         childCoordinators.append(coordinator)
     }
     
-    func removeDependancy(coordinator: DeepLinkCoordinatorType) {
+    func removeDependancy(coordinator: DeepLinkCoordinator) {
         guard childCoordinators.isEmpty == false else { return }
         
         for (index, element) in childCoordinators.enumerate() {

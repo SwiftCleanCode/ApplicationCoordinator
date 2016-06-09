@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private lazy var applicationCoordinator: Coordinator = {
+    private lazy var applicationCoordinator: DeepLinkCoordinator = {
         let tabbarFlowOutput = self.window!.rootViewController as! TabbarFlowOutput
         return ApplicationCoordinator(tabbarFlowOutput: tabbarFlowOutput,
                                       coordinatorFactory: CoordinatorFactoryImp())

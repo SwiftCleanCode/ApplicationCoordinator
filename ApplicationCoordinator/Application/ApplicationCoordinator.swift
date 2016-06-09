@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ApplicationCoordinator: BaseCoordinator {
+final class ApplicationCoordinator: BaseDeepLinkCoordinator {
     
     var tabbarFlowOutput: TabbarFlowOutput
     var coordinatorFactory: CoordinatorFactory

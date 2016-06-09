@@ -6,9 +6,8 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-protocol DeepLink {
-    func forceController()
-    func close()
+protocol DeepLinkCoordinator: Coordinator, Identifierable {
+    func finish()
+    func proceedDeepLink()
 }
 
-typealias DeepLinkCoordinatorType = protocol<Coordinator, DeepLink>

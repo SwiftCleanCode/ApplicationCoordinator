@@ -12,9 +12,9 @@ protocol ItemControllersFactory {
     
     func createItemsBox() ->
         (controllerForPresent: UIViewController,
-        output: ItemsListFlowOutput)
+        configurator: protocol<FlowControllerInput, ItemsListFlowOutput>)
     
     func createItemDetailBox(item item: ItemList) ->
         (controllerForPresent: UIViewController,
-        output: ItemDetailFlowOutput)
+        configurator: protocol<FlowControllerInput, ItemDetailFlowOutput>)
 }

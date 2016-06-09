@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol FlowControllerOutput: NSObjectProtocol { }
-protocol FlowControllerInput: NSObjectProtocol { }
+protocol FlowControllerInput: NSObjectProtocol, Identifierable { }
