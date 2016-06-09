@@ -12,7 +12,7 @@ final class ItemControllersFactoryImp: ItemControllersFactory {
     
     func createItemsBox() ->
         (controllerForPresent: UIViewController,
-        output: ItemsListFlowOutput) {
+        configurator: protocol<FlowControllerInput, ItemsListFlowOutput>) {
             
             let controller = ItemsListController.controllerFromStoryboard(.Items)
             return (controller, controller)
@@ -20,7 +20,7 @@ final class ItemControllersFactoryImp: ItemControllersFactory {
     
     func createItemDetailBox(item item: ItemList) ->
         (controllerForPresent: UIViewController,
-        output: ItemDetailFlowOutput) {
+        configurator: protocol<FlowControllerInput, ItemDetailFlowOutput>) {
             
             let controller = ItemDetailController.controllerFromStoryboard(.Items)
             controller.itemList = item

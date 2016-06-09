@@ -9,37 +9,37 @@ import UIKit
 
 final class CoordinatorFactoryImp: CoordinatorFactory {
     
-    func createItemCoordinator() -> Coordinator {
+    func createItemCoordinator() -> DeepLinkCoordinator {
         return createItemCoordinator(navController: nil)
     }
     
-    func createItemCoordinator(navController navController: UINavigationController?) -> Coordinator {
+    func createItemCoordinator(navController navController: UINavigationController?) -> DeepLinkCoordinator {
         let coordinator = ItemCoordinator(router: router(navController),
                                           factory: ItemControllersFactoryImp(),
                                           coordinatorFactory: CoordinatorFactoryImp())
         return coordinator
     }
     
-    func createSettingsCoordinator() -> Coordinator {
+    func createSettingsCoordinator() -> DeepLinkCoordinator {
         return createSettingsCoordinator(navController: nil)
     }
     
-    func createSettingsCoordinator(navController navController: UINavigationController? = nil) -> Coordinator {
+    func createSettingsCoordinator(navController navController: UINavigationController? = nil) -> DeepLinkCoordinator {
         let coordinator = SettingsCoordinator(router: router(navController),
                                               factory: SettingsControllersFactoryImp())
         return coordinator
     }
     
     func createItemCreationCoordinatorBox() ->
-        (coordinator: DeepLinkCoordinatorType,
-         output: ItemCreateCoordinatorOutput,
+        (coordinator: DeepLinkCoordinator,
+        configurator: ItemCreateCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             
             return createItemCreationCoordinatorBox(navController: nil)
     }
     func createItemCreationCoordinatorBox(navController navController: UINavigationController? = nil) ->
-        (coordinator: DeepLinkCoordinatorType,
-        output: ItemCreateCoordinatorOutput,
+        (coordinator: DeepLinkCoordinator,
+        configurator: ItemCreateCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             
             let router = self.router(navController)
@@ -49,16 +49,16 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
     }
     
     func createAuthCoordinatorBox() ->
-        (coordinator: DeepLinkCoordinatorType,
-        output: AuthCoordinatorOutput,
+        (coordinator: DeepLinkCoordinator,
+        configurator: AuthCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             
             return createAuthCoordinatorBox(navController: nil)
     }
     
     func createAuthCoordinatorBox(navController navController: UINavigationController? = nil) ->
-        (coordinator: DeepLinkCoordinatorType,
-        output: AuthCoordinatorOutput,
+        (coordinator: DeepLinkCoordinator,
+        configurator: AuthCoordinatorOutput,
         controllerForPresent: UIViewController?) {
             let router = self.router(navController)
             let coordinator = AuthCoordinator(router: router,

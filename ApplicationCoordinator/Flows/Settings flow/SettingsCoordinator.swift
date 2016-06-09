@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-final class SettingsCoordinator: BaseCoordinator {
+final class SettingsCoordinator: BaseDeepLinkCoordinator {
 
     var factory: SettingsControllersFactory
     var router: Router

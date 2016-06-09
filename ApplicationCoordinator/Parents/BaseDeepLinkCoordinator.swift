@@ -11,18 +11,28 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinator {
     var childCoordinators: [DeepLinkCoordinator] = []
     
     func start() {
-        assertionFailure("")
+        assertionFailure("Must be overriden")
     }
     
-    func finish() {
-        
-        for coordinator in childCoordinators {
-            coordinator.finish()
-        }
-    }
+    func finish() { }
     
     func proceedDeepLink(seed: [DeepLinkSeed]) {
+        assertionFailure("Must be overriden")
+    }
+    
+    func buildTree() -> CoordinatorTree {
         
+        var tree = CoordinatorTree(className: classIdentifier(),
+                                   controllers: controllersClassNames(),
+                                   childCoordinators: [])
+        for child in childCoordinators {
+            tree.childCoordinators?.append(child.buildTree())
+        }
+        return tree
+    }
+    
+    func controllersClassNames() -> [String] {
+        return []
     }
     
     // add only unique object

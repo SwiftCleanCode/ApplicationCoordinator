@@ -6,4 +6,8 @@
 //  Copyright © 2016 Andrey Panov. All rights reserved.
 //
 
-import Foundation
+struct CoordinatorTree {
+    let className: String
+    let controllers: [String]? //class names
+    var childCoordinators: [CoordinatorTree]?
+}

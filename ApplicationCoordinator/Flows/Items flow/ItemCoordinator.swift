@@ -26,16 +26,15 @@ final class ItemCoordinator: BaseDeepLinkCoordinator {
         showItemList()
     }
     
-    override func close() {
-        super.close()
-        
-        router.popToRootController()
-    }
-    
-    override func forceController() {
-        close()
-        
-        
+    override func controllersClassNames() -> [String] {
+        guard let rootController = router.rootController else { return [] }
+        var classNames: [String] = []
+        for controller in rootController.viewControllers {
+            if let input = controller as? FlowControllerInput {
+                classNames.append(input.classIdentifier())
+            }
+        }
+        return classNames
     }
     
 //MARK: - Run current flow's controllers
@@ -43,13 +42,13 @@ final class ItemCoordinator: BaseDeepLinkCoordinator {
     private func showItemList() {
       
         let itemFlowBox = factory.createItemsBox()
-        itemFlowBox.output.authNeed = { [weak self] in
+        itemFlowBox.configurator.authNeed = { [weak self] in
             self?.runAuthCoordinator()
         }
-        itemFlowBox.output.onItemSelect = { [weak self] (item) in
+        itemFlowBox.configurator.onItemSelect = { [weak self] (item) in
             self?.showItemDetail(item)
         }
-        itemFlowBox.output.onCreateButtonTap = { [weak self] in
+        itemFlowBox.configurator.onCreateButtonTap = { [weak self] in
             self?.runCreationCoordinator()
         }
         router.push(itemFlowBox.controllerForPresent, animated: false)
@@ -65,7 +64,7 @@ final class ItemCoordinator: BaseDeepLinkCoordinator {
     
     private func runAuthCoordinator() {
         var authFlowBox = coordinatorFactory.createAuthCoordinatorBox()
-        authFlowBox.output.finishFlow = { [weak self] in
+        authFlowBox.configurator.finishFlow = { [weak self] in
             self?.router.dismissController()
             self?.removeDependancy(authFlowBox.coordinator)
         }
@@ -77,7 +76,7 @@ final class ItemCoordinator: BaseDeepLinkCoordinator {
     private func runCreationCoordinator() {
         
         var creationBox = coordinatorFactory.createItemCreationCoordinatorBox()
-        creationBox.output.finishFlow = { [weak self] item in
+        creationBox.configurator.finishFlow = { [weak self] item in
             
             self?.router.dismissController()
             self?.removeDependancy(creationBox.coordinator)

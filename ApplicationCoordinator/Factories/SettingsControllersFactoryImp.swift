@@ -12,7 +12,7 @@ final class SettingsControllersFactoryImp: SettingsControllersFactory {
     
     func createSettingsBox() ->
         (controllerForPresent: UIViewController,
-         output: SettingsFlowOutput) {
+         configurator: protocol<FlowControllerInput, SettingsFlowOutput>) {
             
             let controller = SettingsController.controllerFromStoryboard(.Settings)
             return (controller, controller)

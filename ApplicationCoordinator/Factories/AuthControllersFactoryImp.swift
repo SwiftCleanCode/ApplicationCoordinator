@@ -12,7 +12,7 @@ final class AuthControllersFactoryImp: AuthControllersFactory {
     
     func createLoginBox() ->
         (controllerForPresent: UIViewController,
-        output: LoginFlowOutput) {
+        configurator: protocol<FlowControllerInput, LoginFlowOutput>) {
             
             let controller = LoginController.controllerFromStoryboard(.Auth)
             return (controller, controller)
@@ -20,7 +20,7 @@ final class AuthControllersFactoryImp: AuthControllersFactory {
     
     func createSignUpBox() ->
         (controllerForPresent: UIViewController,
-        output: SignUpFlowOutput) {
+        configurator: protocol<FlowControllerInput, SignUpFlowOutput>) {
             
             let controller = SignUpController.controllerFromStoryboard(.Auth)
             return (controller, controller)
@@ -28,7 +28,7 @@ final class AuthControllersFactoryImp: AuthControllersFactory {
     
     func createTermsBox() ->
         (controller: UIViewController,
-        output: TermsControllerOutput) {
+        configurator: protocol<FlowControllerInput, TermsControllerOutput>) {
             
             let controller = TermsController.controllerFromStoryboard(.Auth)
             return (controller, controller)

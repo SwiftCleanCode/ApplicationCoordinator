@@ -28,10 +28,10 @@ final class ItemCreateCoordinator: BaseDeepLinkCoordinator, ItemCreateCoordinato
     private func showCreate() {
         
         let createItemFlow = factory.createItemAddBox()
-        createItemFlow.output.onCompleteCreateItem = { [weak self] item in
+        createItemFlow.configurator.onCompleteCreateItem = { [weak self] item in
             self?.finishFlow?(item)
         }
-        createItemFlow.output.onHideButtonTap = { [weak self] in
+        createItemFlow.configurator.onHideButtonTap = { [weak self] in
             self?.finishFlow?(nil)
         }
         router.push(createItemFlow.controllerForPresent, animated: false)

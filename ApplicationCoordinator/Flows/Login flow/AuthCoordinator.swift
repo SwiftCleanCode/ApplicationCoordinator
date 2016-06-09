@@ -28,10 +28,10 @@ final class AuthCoordinator: BaseDeepLinkCoordinator, AuthCoordinatorOutput {
     private func showLogin() {
         
         let loginBox = factory.createLoginBox()
-        loginBox.output.onCompleteAuth = { [weak self] in
+        loginBox.configurator.onCompleteAuth = { [weak self] in
             self?.finishFlow?()
         }
-        loginBox.output.onSignUpButtonTap = { [weak self] in
+        loginBox.configurator.onSignUpButtonTap = { [weak self] in
             self?.showSignUp()
         }
         router.push(loginBox.controllerForPresent, animated: false)
@@ -40,10 +40,10 @@ final class AuthCoordinator: BaseDeepLinkCoordinator, AuthCoordinatorOutput {
     private func showSignUp() {
         
         let signUpBox = factory.createSignUpBox()
-        signUpBox.output.onSignUpComplete = { [weak self] in
+        signUpBox.configurator.onSignUpComplete = { [weak self] in
             self?.finishFlow?()
         }
-        signUpBox.output.onTermsButtonTap = { [weak self] completionHandler in
+        signUpBox.configurator.onTermsButtonTap = { [weak self] completionHandler in
             self?.showTerms(completionHandler)
         }
         router.push(signUpBox.controllerForPresent)
@@ -52,7 +52,7 @@ final class AuthCoordinator: BaseDeepLinkCoordinator, AuthCoordinatorOutput {
     private func showTerms(completionHandler: ((Bool) -> ())) {
         
         let termsBox = factory.createTermsBox()
-        termsBox.output.onPopController = completionHandler
+        termsBox.configurator.onPopController = completionHandler
         router.push(termsBox.controller)
     }
 }
