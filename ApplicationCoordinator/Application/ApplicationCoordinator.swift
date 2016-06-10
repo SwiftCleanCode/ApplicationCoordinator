@@ -27,7 +27,12 @@ final class ApplicationCoordinator: BaseDeepLinkCoordinator {
     }
     
     override func proceedDeepLink(tree: CoordinatorTree) {
-        
+        start()
+        switch tree.className {
+        case "ItemCoordinator":
+        case "SettingsCoordinator":
+        default: break
+        }
     }
     
     private func runItemCoordinator() -> ((UINavigationController) -> ()) {

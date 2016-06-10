@@ -47,6 +47,7 @@
 		D5505CC91CDF68260012CBA6 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5505CC81CDF68260012CBA6 /* NSObjectExtensions.swift */; };
 		D5505CCB1CDF68D10012CBA6 /* StoryboardsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5505CCA1CDF68D10012CBA6 /* StoryboardsEnum.swift */; };
 		D587AD5D1D09815800A9AA24 /* Identifierable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D587AD5C1D09815800A9AA24 /* Identifierable.swift */; };
+		D587AD631D0AC71200A9AA24 /* TreeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D587AD621D0AC71200A9AA24 /* TreeManager.swift */; };
 		D58A5F351D07FD430022977E /* DeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F341D07FD430022977E /* DeepLinkParser.swift */; };
 		D58A5F371D07FD530022977E /* DeepLinkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F361D07FD530022977E /* DeepLinkEnum.swift */; };
 		D58A5F391D07FD690022977E /* DeepLinkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A5F381D07FD690022977E /* DeepLinkCoordinator.swift */; };
@@ -110,6 +111,7 @@
 		D5505CC81CDF68260012CBA6 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		D5505CCA1CDF68D10012CBA6 /* StoryboardsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardsEnum.swift; sourceTree = "<group>"; };
 		D587AD5C1D09815800A9AA24 /* Identifierable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifierable.swift; sourceTree = "<group>"; };
+		D587AD621D0AC71200A9AA24 /* TreeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeManager.swift; sourceTree = "<group>"; };
 		D58A5F341D07FD430022977E /* DeepLinkParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkParser.swift; sourceTree = "<group>"; };
 		D58A5F361D07FD530022977E /* DeepLinkEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkEnum.swift; sourceTree = "<group>"; };
 		D58A5F381D07FD690022977E /* DeepLinkCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkCoordinator.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			children = (
 				D587AD5C1D09815800A9AA24 /* Identifierable.swift */,
 				D58A5F341D07FD430022977E /* DeepLinkParser.swift */,
+				D587AD621D0AC71200A9AA24 /* TreeManager.swift */,
 				D58A5F3A1D08035E0022977E /* CoordinatorTree.swift */,
 				D58A5F361D07FD530022977E /* DeepLinkEnum.swift */,
 				D58A5F381D07FD690022977E /* DeepLinkCoordinator.swift */,
@@ -474,6 +477,7 @@
 				0E3CCF991CCBBB670022E830 /* AppDelegate.swift in Sources */,
 				0E6A42C01CF4E06C005746EC /* ItemControllersFactory.swift in Sources */,
 				0E3CCFBA1CCBBFEF0022E830 /* LoginController.swift in Sources */,
+				D587AD631D0AC71200A9AA24 /* TreeManager.swift in Sources */,
 				0E3CCFC71CCBC6740022E830 /* ItemList.swift in Sources */,
 				0E6A42C41CF4E300005746EC /* AuthControllersFactory.swift in Sources */,
 				D541E7661CD9128B004C38B3 /* FlowControllerInputOutput.swift in Sources */,
