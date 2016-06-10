@@ -16,19 +16,8 @@ class BaseDeepLinkCoordinator: DeepLinkCoordinator {
     
     func finish() { }
     
-    func proceedDeepLink(seed: [DeepLinkSeed]) {
+    func proceedDeepLink(tree: CoordinatorTree) {
         assertionFailure("Must be overriden")
-    }
-    
-    func buildTree() -> CoordinatorTree {
-        print(classIdentifier())
-        var tree = CoordinatorTree(className: classIdentifier(),
-                                   controllers: controllersClassNames(),
-                                   childCoordinators: [])
-        for child in childCoordinators {
-            tree.childCoordinators?.append(child.buildTree())
-        }
-        return tree
     }
     
     func controllersClassNames() -> [String] {

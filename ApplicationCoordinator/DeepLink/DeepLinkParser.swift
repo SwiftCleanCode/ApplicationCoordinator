@@ -8,14 +8,11 @@
 
 import Foundation
 
-struct DeepLinkSeed {
-    let className: String
-    let classType: EntityType
-}
-
 final class DeepLinkParser {
     
-    class func proceed() -> [DeepLinkSeed] {
+    class func proceed() -> CoordinatorTree {
+        
+        var tree = CoordinatorTree(className: "ApplicationCoordinator", controllers: [], childCoordinators: [])
         
         return [DeepLinkSeed(className: "ItemCoordinator", classType: .Coordinator),
                 DeepLinkSeed(className: "ItemCreateCoordinator", classType: .Coordinator),

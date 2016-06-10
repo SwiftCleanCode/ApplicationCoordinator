@@ -26,7 +26,7 @@ final class ApplicationCoordinator: BaseDeepLinkCoordinator {
         tabbarFlowOutput.onSettingsFlowSelect = runSettingsCoordinator()
     }
     
-    override func proceedDeepLink(seed: [DeepLinkSeed]) {
+    override func proceedDeepLink(tree: CoordinatorTree) {
         
     }
     
