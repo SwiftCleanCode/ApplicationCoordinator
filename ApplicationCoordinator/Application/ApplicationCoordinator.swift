@@ -10,28 +10,28 @@ import UIKit
 
 final class ApplicationCoordinator: BaseDeepLinkCoordinator {
     
-    var tabbarFlowOutput: TabbarFlowOutput
+    var tabbarConfigurator: protocol<TabbarFlowInput, TabbarFlowOutput>
     var coordinatorFactory: CoordinatorFactory
 
-    init(tabbarFlowOutput: TabbarFlowOutput,
+    init(tabbarConfigurator: protocol<TabbarFlowInput, TabbarFlowOutput>,
          coordinatorFactory: CoordinatorFactory) {
         
-        self.tabbarFlowOutput = tabbarFlowOutput
+        self.tabbarConfigurator = tabbarConfigurator
         self.coordinatorFactory = coordinatorFactory
     }
     
     override func start() {
-        tabbarFlowOutput.onViewDidLoad = runItemCoordinator()
-        tabbarFlowOutput.onItemFlowSelect = runItemCoordinator()
-        tabbarFlowOutput.onSettingsFlowSelect = runSettingsCoordinator()
+        tabbarConfigurator.onViewDidLoad = runItemCoordinator()
+        tabbarConfigurator.onItemFlowSelect = runItemCoordinator()
+        tabbarConfigurator.onSettingsFlowSelect = runSettingsCoordinator()
     }
     
     override func proceedDeepLink(tree: CoordinatorTree) {
         start()
         switch tree.className {
-        case "ItemCoordinator":
-        case "SettingsCoordinator":
-        default: break
+            case "ItemCoordinator": tabbarConfigurator.selectTabAtIndex(0)
+            case "SettingsCoordinator": tabbarConfigurator.selectTabAtIndex(1)
+            default: break
         }
     }
     

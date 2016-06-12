@@ -32,7 +32,7 @@
 		0E6A42C61CF4E45F005746EC /* SettingsControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42C51CF4E45F005746EC /* SettingsControllersFactory.swift */; };
 		0E6A42CA1CF4E81E005746EC /* ItemCreateCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42C91CF4E81E005746EC /* ItemCreateCoordinatorOutput.swift */; };
 		0E6A42CD1CF4E862005746EC /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42CC1CF4E862005746EC /* AuthCoordinatorOutput.swift */; };
-		0E6A42D01CF4E8F1005746EC /* TabbarFlowOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42CF1CF4E8F1005746EC /* TabbarFlowOutput.swift */; };
+		0E6A42D01CF4E8F1005746EC /* TabbarFlowInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42CF1CF4E8F1005746EC /* TabbarFlowInputOutput.swift */; };
 		0E6A42D21CF627CC005746EC /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42D11CF627CC005746EC /* TermsController.swift */; };
 		0E6A42D41CF62EA2005746EC /* TermsControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A42D31CF62EA2005746EC /* TermsControllerOutput.swift */; };
 		0EDCA2F51CEE365300A6E385 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCA2F41CEE365300A6E385 /* Router.swift */; };
@@ -94,7 +94,7 @@
 		0E6A42C51CF4E45F005746EC /* SettingsControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsControllersFactory.swift; sourceTree = "<group>"; };
 		0E6A42C91CF4E81E005746EC /* ItemCreateCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCreateCoordinatorOutput.swift; sourceTree = "<group>"; };
 		0E6A42CC1CF4E862005746EC /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
-		0E6A42CF1CF4E8F1005746EC /* TabbarFlowOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarFlowOutput.swift; sourceTree = "<group>"; };
+		0E6A42CF1CF4E8F1005746EC /* TabbarFlowInputOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarFlowInputOutput.swift; sourceTree = "<group>"; };
 		0E6A42D11CF627CC005746EC /* TermsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		0E6A42D31CF62EA2005746EC /* TermsControllerOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsControllerOutput.swift; sourceTree = "<group>"; };
 		0EDCA2F41CEE365300A6E385 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			children = (
 				0E3CCF7D1CCBBB670022E830 /* AppDelegate.swift */,
 				0E3CCF7E1CCBBB670022E830 /* ApplicationCoordinator.swift */,
-				0E6A42CF1CF4E8F1005746EC /* TabbarFlowOutput.swift */,
+				0E6A42CF1CF4E8F1005746EC /* TabbarFlowInputOutput.swift */,
 				D541E76B1CD9134A004C38B3 /* TabbarController.swift */,
 			);
 			name = Application;
@@ -512,7 +512,7 @@
 				D5FE332B1D071ED900CE38B1 /* ItemControllersFactoryImp.swift in Sources */,
 				D5FE332F1D071F4100CE38B1 /* CoordinatorFactoryImp.swift in Sources */,
 				0E6A42C61CF4E45F005746EC /* SettingsControllersFactory.swift in Sources */,
-				0E6A42D01CF4E8F1005746EC /* TabbarFlowOutput.swift in Sources */,
+				0E6A42D01CF4E8F1005746EC /* TabbarFlowInputOutput.swift in Sources */,
 				0E3CCFA01CCBBB670022E830 /* UIViewControllerExtension.swift in Sources */,
 				D58A5F3D1D082AFF0022977E /* BaseDeepLinkCoordinator.swift in Sources */,
 				0E3CCFC21CCBC0AA0022E830 /* ItemCreateCoordinator.swift in Sources */,

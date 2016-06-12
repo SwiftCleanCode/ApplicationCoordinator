@@ -8,7 +8,11 @@
 
 import UIKit
 
-protocol TabbarFlowOutput {
+protocol TabbarFlowInput: FlowControllerInput {
+    func selectTabAtIndex(index: Int)
+}
+
+protocol TabbarFlowOutput: FlowControllerOutput {
     
     var onItemFlowSelect: (UINavigationController -> ())? { get set }
     var onSettingsFlowSelect: (UINavigationController -> ())? { get set }

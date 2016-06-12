@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TabbarController: UITabBarController, UITabBarControllerDelegate, FlowControllerInput, TabbarFlowOutput {
+final class TabbarController: UITabBarController, UITabBarControllerDelegate, TabbarFlowInput, TabbarFlowOutput {
     
     var onItemFlowSelect: (UINavigationController -> ())?
     var onSettingsFlowSelect: (UINavigationController -> ())?
@@ -32,5 +32,9 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate, Fl
         else if selectedIndex == 1 {
             onSettingsFlowSelect?(controller)
         }
+    }
+    
+    func selectTabAtIndex(index: Int) {
+        selectedIndex = index
     }
 }
